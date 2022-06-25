@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hangman</title>
+</head>
+<body>
+    
+
+    <div class="game">
+        <div id="starterScreen">
+            <p>Add meg a szót amire gondolsz</p>
+            <input id="wordInput" type="text"> <br> <br>
+            <button id="startButton">Indítás</button>
+        </div> 
+        <div id="gameScreen">
+            <p>Találd ki az adott szót!</p>
+            <div id="letters"></div>
+            <div id="letterButtons"></div>
+            <div id="image"> <img src="imgs/0.png"> </div>
+        </div>
+    </div>
+    <style>
+        body {
+            font-size: 40px;
+        }
+        .game {
+            margin-top: 5%;
+            text-align: center;
+        }
+        #gameScreen {
+            display: none;
+        }
+        #letters {
+            display: flex;
+            justify-content: center;
+        }
+        #letters .letterblock {
+            margin: 15px;
+            border-bottom-style: solid;
+            max-width: 50px;
+            width: 50px;
+        }
+        #letters .hidden {
+            opacity: 0;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+    <script src="script.js"></script>
+    <script src="renderButtons.js"></script>
+</body>
+</html>
